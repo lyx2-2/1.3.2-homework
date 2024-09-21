@@ -1,0 +1,363 @@
+/* style.css */
+:root {
+  --primary-color: #FA65A0;
+  --neutral-grey: #FFFFFF;
+  --pink-light: #FEE0EC;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* (1.2.3.) */
+  list-style: none;
+  /* 点文字文字会变色,就是text decoration */
+  text-decoration: none;
+  /* 网页的文字是否能被选中 */
+  user-select: none;
+  /* 图片能否被拽走 */
+  -webkit-user-drag: none;
+  box-sizing: border-box;
+  /* 再变回来，这样字的大小还是16px不会收到影响 */
+  font-size: 1.6rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  /* 背景颜色 */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+}
+
+.phone-frame,
+.new-frame {
+  width: 39.3rem;
+  height: 78rem;
+  border-radius: 36px;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 防止内容溢出 */
+  overflow: hidden;
+  /* 防止框子缩小 */
+  flex-shrink: 0;
+}
+
+.new-frame {
+  padding: 1rem;
+  flex-direction: column;
+  /* 垂直排列 */
+}
+
+.sentence-1 {
+  position: absolute;
+  top: 4rem;
+  left: 4.4rem;
+  /* 调整水平位置 */
+  color: black;
+  /* 设置文字颜色 */
+  font-weight: bold;
+  ;
+  font-size: 2.5rem;
+  /* 字体大小 */
+  padding: 0.2rem 0.5rem;
+  /* 添加内边距 */
+}
+
+.button-primary,
+.button-secondary {
+  padding: 1rem 3.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  width: 35rem;
+  /* 设置按钮宽度 */
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  /* 确保文字水平居中 */
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: center;
+  /* 水平居中 */
+}
+
+.button-primary {
+  color: var(--neutral-grey);
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+}
+
+
+.button-secondary {
+  color: var(--primary-color);
+  padding: 1rem 3.2rem;
+  border: 0.1px solid;
+  border-radius: 8px;
+}
+
+
+
+.text-box-secondary {
+  color: var(--primary-color);
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  border: 0.1rem solid;
+  border-radius: 1rem;
+  position: absolute;
+  top: 20rem;
+  left: 2rem;
+  width: 35rem;
+  height: 7rem;
+}
+
+.icon2 {
+  position: absolute;
+  /* 使用绝对定位 */
+  right: 10px;
+  /* 图标与文本框右边的距离 */
+  top: 24rem;
+  /* 垂直居中 */
+  right: 4rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  /* 设置鼠标样式为点击 */
+}
+
+
+.text-box-primary {
+  color: var(--primary-color);
+  /* 文字颜色 */
+  border: none;
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  /* 内边距 */
+  border-radius: 1rem 1rem 0 0;
+  /* 上面两个角是圆角，下面是直角 */
+  position: relative;
+  bottom: 25rem;
+  width: 35rem;
+  height: 7rem;
+  background-color: var(--pink-light);
+}
+
+
+
+/* 清除文本框默认居中样式 */
+input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  /* 移除焦点时的外框 */
+  font-size: 2rem;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: var(--primary-color);
+  /* 你可以根据需求更改颜色 */
+  opacity: 1;
+  /* 确保颜色不会半透明 */
+}
+
+.icon1 {
+  position: absolute;
+  /* 使用绝对定位 */
+  right: 10px;
+  /* 图标与文本框右边的距离 */
+  top: 14rem;
+  /* 垂直居中 */
+  right: 4rem;
+  transform: translateY(-50%);
+  /* 垂直居中的修正 */
+  width: 2rem;
+  /* 图标的宽度 */
+  height: 2rem;
+  /* 图标的高度 */
+  cursor: pointer;
+  /* 设置鼠标样式为点击 */
+}
+
+.sentence-2 {
+  position: absolute;
+  top: 42rem;
+  color: var(--primary-color);
+  /* 设置文字颜色 */
+  font-size: 1.5rem;
+  /* 字体大小 */
+  padding: 0.2rem 0.5rem;
+  /* 添加内边距 */
+}
+
+.underline {
+  text-decoration: underline;
+  /* 给文本添加下划线 */
+}
+
+.bold {
+  font-weight: bold;
+  /* 给文本加粗 */
+}
+
+.aite {
+  position: absolute;
+  bottom: 10rem;
+  color: var(--primary-color);
+  /* 设置文字颜色 */
+  font-size: 1.5rem;
+  /* 字体大小 */
+  padding: 0.2rem 0.5rem;
+  /* 添加内边距 */
+}
+
+
+
+
+
+/* .button {
+  background-color: var(--primary-color);
+  width: 20rem;
+  height: 10rem;
+
+} */
+
+
+.switch-container-1,
+.switch-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 确保开关在中间 */
+  position: relative;
+  /* 让子元素绝对定位相对于这个容器 */
+  width: 10rem;
+  /* 设置宽度 */
+  height: 5rem;
+  /* 设置高度 */
+  cursor: pointer;
+  /* 鼠标样式 */
+}
+
+
+.switch-primary {
+  width: 5.2rem;
+  height: 3.2rem;
+  background-color: var(--primary-color);
+  /* 背景色 */
+  border-radius: 20rem;
+  /* 圆角 */
+  position: relative;
+  /* 绝对定位 */
+
+
+  display: flex;
+  /* 确保内容居中 */
+  justify-content: flex-start;
+  /* 靠左对齐 */
+  align-items: center;
+  /* 垂直居中 */
+
+}
+
+.circle-1 {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--neutral-grey);
+  border-radius: 50%;
+  position: absolute;
+  left: 4.7rem;
+}
+
+
+.switch-secondary {
+  width: 5.2rem;
+  height: 3.2rem;
+  border: 0.2rem solid var(--primary-color);
+  /* 边框样式 */
+  border-radius: 2.5rem;
+  /* 圆角效果 */
+  position: relative;
+  /* 绝对定位 */
+
+}
+
+.circle-2 {
+  width: 1.6rem;
+  /* 圆的宽度 */
+  height: 1.6rem;
+  /* 圆的高度 */
+  background-color: #FCA3C6;
+  /* 圆的背景色 */
+  border-radius: 50%;
+  /* 使其变为圆形 */
+  position: absolute;
+  /* 绝对定位 */
+  left: 3.3rem;
+}
+
+.box {
+  width: 36rem;
+  height: 4.8rem;
+  background-color: #FCA3C6;
+  display: flex;
+  /* 使用 Flexbox */
+}
+
+.tab {
+  flex: 1;
+  /* 使每个标签等宽 */
+  display: flex;
+  /* 使内容也可以使用 Flexbox */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  border-right: 1px solid #fff;
+  color: white;
+
+  flex-direction: column;
+  /* 垂直排列内容 */
+  justify-content: center;
+  align-items: center;
+  /* 水平居中 */
+}
+
+.divider {
+  height: 2px;
+  /* 线的高度 */
+  background-color: #E6E0E9;
+  /* 线的颜色 */
+  width: 36rem;
+  /* 线的宽度，跟随容器 */
+}
+
+.tab .icon5 {
+  position: absolute;
+  /* 绝对定位 */
+  bottom: 31.5rem;
+  /* 贴近底部 */
+  left: 5.5rem;
+}
